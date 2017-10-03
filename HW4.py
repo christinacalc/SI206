@@ -178,7 +178,18 @@ class CardTests(unittest.TestCase):
 		self.assertEqual(type(p[0]), str)
 
 
+	def test_popInstance2(self):
+		d= Deck()
+		c= Card()
+		d.pop_card()
+		self.assertEqual(len(d.cards), 51)
+		
 
+	def test_wargame(self):
+		p = play_war_game(testing= True)
+		self.assertEqual(type(p), tuple)
+
+	
 
 #############
 ## The following is a line to run all of the tests you include:
